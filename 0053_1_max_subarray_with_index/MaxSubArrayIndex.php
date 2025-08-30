@@ -7,18 +7,17 @@ class MaxSubArrayIndex {
      * @return Integer
      */
     function maxSubArray($nums) {
-        $global_max = $current_max = $nums[0];
-        $start = 0;
-        $end = 0;
-        $temp_start = 0;
+        $global_max = $nums[0];
+        $current_max = $nums[0];
 
-        for($i=1; $i<count($nums); $i++){
+        $start = $end = $temp_start = 0;
 
+        for($i = 1; $i <count($nums); $i++){
             if($nums[$i] > $current_max + $nums[$i]){
                 $current_max = $nums[$i];
                 $temp_start = $i;
             }else{
-                $current_max += $nums[$i];
+               $current_max += $nums[$i];    
             }
 
             if($current_max > $global_max){
@@ -28,12 +27,13 @@ class MaxSubArrayIndex {
             }
         }
 
-        return [
-            "max" => $global_max,
-            "start" => $start,
-            "end" => $end,
-            "sub_array"=>array_slice($nums, $start, $end - $start + 1)
-        ];
+        echo "Found array \n\n";
+        for($i=$start; $i<=$end; $i++){
+            echo "{$i} = {$nums[$i]}\n";
+        }
+        echo "\n\n";
+
+        return $global_max;
     }
 }
 
@@ -41,7 +41,8 @@ $nums = [-2,1,-3,4,-1,2,1,-5,4];
 
 $solution = new MaxSubArrayIndex();
 
+print_r($nums);
+
 $answer = $solution->maxSubArray($nums);
 
-print_r($nums);
-print_r($answer);
+echo "Answer : ".$answer."\n";
