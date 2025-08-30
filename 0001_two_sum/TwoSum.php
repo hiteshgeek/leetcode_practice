@@ -1,5 +1,5 @@
 <?php
-class Solution {
+class TwoSum {
 
     /**
      * @param Integer[] $nums
@@ -39,19 +39,19 @@ function printAnswer($nums, $target, $answer){
     echo "\n-----------------------\n\n";
 }
 
-$solution = new Solution();
+$ob = new TwoSum();
 
 $nums = [2,7,11,15];
 $target = 9;
-$answer = $solution->twoSum($nums, $target);
+$answer = $ob->twoSum($nums, $target);
 printAnswer($nums, $target, $answer);
 
 $nums = [3,2,4];
 $target = 6;
-$answer = $solution->twoSum($nums, $target);
+$answer = $ob->twoSum($nums, $target);
 printAnswer($nums, $target, $answer);
 
 $nums = [3,3];
 $target = 6;
-$answer = $solution->twoSum($nums, $target);
+$answer = $ob->twoSum($nums, $target);
 printAnswer($nums, $target, $answer);

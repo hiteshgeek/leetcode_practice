@@ -1,6 +1,6 @@
 from typing import List
 
-class Solution:
+class TwoSum:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         map = {}
         
@@ -23,21 +23,21 @@ def printAnswer(nums, target, answer):
     
     print("\n-----------------------\n")
             
-solution = Solution()
+ob = TwoSum()
 
 nums = [2,7,11,15]
 target = 9
-answer = solution.twoSum(nums, target)
+answer = ob.twoSum(nums, target)
 printAnswer(nums, target, answer)
 
 nums = [3,2,4]
 target = 6
-answer = solution.twoSum(nums, target)
+answer = ob.twoSum(nums, target)
 printAnswer(nums, target, answer)
 
 nums = [3,3]
 target = 6
-answer = solution.twoSum(nums, target)
+answer = ob.twoSum(nums, target)
 printAnswer(nums, target, answer)
 
             
