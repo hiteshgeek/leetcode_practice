@@ -1,6 +1,6 @@
 <?php 
 
-class Solution {
+class ContainDuplicate {
 
     /**
      * @param Integer[] $nums
@@ -20,3 +20,8 @@ class Solution {
         return false;
     }
 }
+
+$nums = [1, 2, 3, 1];
+$ob = new ContainDuplicate();
+echo $ob->containsDuplicate($nums) ? "True" : "False";
+echo "\n";

@@ -1,4 +1,4 @@
-class Solution(object):
+class ContainsDuplicate(object):
     def containsDuplicate(self, nums):
         map = {}
         
@@ -7,3 +7,11 @@ class Solution(object):
                 return True
             map[num] = i
         return False
+
+ob = ContainsDuplicate()
+
+nums = [1, 2, 3, 1]
+
+answer = ob.containsDuplicate(nums)
+
+print(f"Answer {answer}")
