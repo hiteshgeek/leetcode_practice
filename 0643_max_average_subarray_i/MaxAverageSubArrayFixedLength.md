@@ -1,3 +1,5 @@
+# [Back to Index](../README.md)
+
 **Easy**
 
 [Leetcode 643](https://leetcode.com/problems/maximum-average-subarray-i/description/)
